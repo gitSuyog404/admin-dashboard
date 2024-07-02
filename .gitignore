@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+admin-fe/node_modules
+admin-fe/.pnp
+admin-fe/.pnp.js
+admin-fe/.yarn/install-state.gz
+
+# testing
+admin-fe/coverage
+
+# next.js
+admin-fe/.next/
+admin-fe/out/
+
+# production
+admin-fe/build
+
+# misc
+admin-fe/.DS_Store
+admin-fe/*.pem
+
+# debug
+admin-fe/npm-debug.log*
+admin-fe/yarn-debug.log*
+admin-fe/yarn-error.log*
+
+# local env files
+admin-fe/.env*.local
+
+# vercel
+admin-fe/.vercel
+
+# typescript
+admin-fe/*.tsbuildinfo
+admin-fe/next-env.d.ts
