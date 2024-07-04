@@ -114,7 +114,7 @@ const Signup = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
-                  className="p-3 border dark:text-gray-300 border-gray-300 dark:bg-[#0B1437] opacity-55 rounded-lg shadow-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:ring-purple-600 focus:border-indigo-500 dark:border-purple-600"
+                  className="p-3 border dark:text-gray-300 border-gray-300 dark:bg-[#0B1437] opacity-55 rounded-lg shadow-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:ring-purple-600 dark:focus:border-indigo-600 "
                   placeholder="Min. 8 characters"
                   required
                 />
@@ -152,7 +152,7 @@ const Signup = () => {
           </div>
 
           <div className="flex items-center text-center  my-2 mb-6">
-            <button className=" bg-indigo-600 dark:bg-[#7551FF] text-white   py-3 rounded-xl pl-[12.5rem] pr-[12.5rem] mr-1    shadow-lg  hover:shadow-2xl dark:hover:bg-purple-700 hover:bg-indigo-900 hover:scale-105 transition duration-300 ease-in-out max-sm:px-[8rem] text-center text-nowrap">
+            <button className=" bg-indigo-600 dark:bg-purple-600 text-white   py-3 rounded-xl pl-[12.5rem] pr-[12.5rem] mr-1    shadow-lg  hover:shadow-2xl dark:hover:bg-purple-700 hover:bg-indigo-900 hover:scale-105 transition duration-300 ease-in-out max-sm:px-[8rem] text-center text-nowrap">
               Sign In{" "}
             </button>
           </div>
