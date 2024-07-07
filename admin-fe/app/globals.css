@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link-container {
+  position: relative;
+}
+
+.link-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background-color: transparent;
+  border-radius: 10px 10px 10px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.link-container:hover::after {
+  background-color: rgb(31, 31, 232);
+}

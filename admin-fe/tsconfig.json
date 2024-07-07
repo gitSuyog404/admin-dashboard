@@ -19,6 +19,7 @@
     ],
     "paths": {
       "@/*": ["./*"]
+      // "@heroicons/react/outline": ["./node_modules/@heroicons/react/outline"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
