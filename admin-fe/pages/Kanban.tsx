@@ -5,12 +5,11 @@ import React from "react";
 
 const Kanban = () => {
   return (
-    <section className="flex h-screen w-screen bg-[#F4F7FE]">
+    <section className="flex h-full w-screen   ">
       <Sidebar />
       <div className="flex flex-col flex-grow    ">
         <Topbar />
-
-        <div className="flex-grow px-4   bg-gray-100 ">
+        <div className="flex-grow   ">
           <KanbanBoard />
         </div>
       </div>

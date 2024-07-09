@@ -12,7 +12,7 @@ import { BiTable } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="pl-8 pt-2 bg-white flex flex-col  ">
+    <div className="pl-8 pt-2 bg-white flex flex-col   ">
       <div className="flex items-center justify-start pt-10 py-4">
         <h1 className="text-3xl text-[#2B3674]">
           <span className="font-bold ">HORIZON</span> FREE

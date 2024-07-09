@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-[#F4F7FE];
+}
+
 .link-container {
   position: relative;
 }
