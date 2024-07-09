@@ -1,10 +1,10 @@
-import Topbar from "@/components/Topbar";
+import Kanban from "@/pages/Kanban";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <Topbar />
+      <Kanban />
     </div>
   );
 }

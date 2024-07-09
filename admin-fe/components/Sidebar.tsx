@@ -12,13 +12,13 @@ import { BiTable } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="px-8 mt-8 bg-white flex flex-col ">
-      <div className="flex items-center justify-start">
-        <h1 className="text-2xl text-[#2B3674]">
+    <div className="pl-8 pt-2 bg-white flex flex-col  ">
+      <div className="flex items-center justify-start pt-10 py-4">
+        <h1 className="text-3xl text-[#2B3674]">
           <span className="font-bold ">HORIZON</span> FREE
         </h1>
       </div>
-      <div className="mt-10 -ml-8 border-t border-gray-200 w-[18rem]"></div>
+      <div className="mt-10 -ml-8 -mr-8 border-t border-gray-200 w-[17rem]"></div>
 
       <nav className="mt-10">
         <Link
