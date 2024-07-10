@@ -17,7 +17,7 @@ const KanbanBoard = () => {
   };
 
   const deleteColumn = (id: Id) => {
-    const filteredColumns = columns.filter((col) => col.id! == id);
+    const filteredColumns = columns.filter((col) => col.id !== id);
     setColumns(filteredColumns);
   };
   return (
