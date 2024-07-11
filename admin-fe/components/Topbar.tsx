@@ -4,7 +4,7 @@ import { FaBell, FaInfoCircle, FaMoon, FaSearch } from "react-icons/fa";
 
 const Topbar = () => {
   return (
-    <div className="  bg-transparent flex items-center  justify-between  mt-6  gap-[28rem] ">
+    <div className="relative  bg-transparent flex items-center  justify-between  mt-6  gap-[28rem] ">
       <div className=" font-semibold flex flex-col ml-6 ">
         <p className="text-lg text-[#707EAE] ">Pages / Kanban</p>
         <h1 className="text-[2rem] text-[#2B3674]">Kanban</h1>
