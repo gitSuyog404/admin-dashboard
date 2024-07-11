@@ -21,7 +21,7 @@ const KanbanBoard = () => {
     setColumns(filteredColumns);
   };
   return (
-    <div className="px-6 m-auto flex min-h-screen w-full items-start overflow-x-auto overflow-y-hidden">
+    <div className="px-6 m-auto flex min-h-screen w-full items-start overflow-x-auto overflow-y-hidden relative bottom-[7rem]">
       <div className="flex gap-4">
         <div className="flex gap-4">
           {columns.map((col) => (
