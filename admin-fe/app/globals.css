@@ -26,3 +26,15 @@ body {
 .link-container:hover::after {
   background-color: rgb(31, 31, 232);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 bg-opacity-50 rounded-xl;
+}
