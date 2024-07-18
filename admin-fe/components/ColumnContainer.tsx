@@ -1,20 +1,36 @@
 "use client";
 
-import { Column, Id } from "@/types";
-import { useSortable } from "@dnd-kit/sortable";
+import { Column, Id, Task } from "@/types";
+import { SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import TaskCard from "./TaskCard";
 
 interface Props {
   column: Column;
   deleteColumn: (id: Id) => void;
   updateColumn: (id: Id, title: string) => void;
+  createTask: (columnId: Id) => void;
+  deleteTask: (id: Id) => void;
+  updateTask: (id: Id, content: string) => void;
+  tasks: Task[];
 }
 
 const ColumnContainer = (props: Props) => {
-  const { column, deleteColumn, updateColumn } = props;
+  const {
+    column,
+    deleteColumn,
+    updateColumn,
+    createTask,
+    tasks,
+    deleteTask,
+    updateTask,
+  } = props;
 
   const [editMode, setEditMode] = useState(false);
+  const tasksIds = useMemo(() => {
+    return tasks.map((task) => task.id);
+  }, [tasks]);
 
   const {
     setNodeRef,
@@ -50,7 +66,7 @@ const ColumnContainer = (props: Props) => {
     <div
       ref={setNodeRef}
       style={style}
-      className=" mt-[10rem] bg-white shadow-lg w-[21.9rem] h-[31.29rem] max-h[31.29rem] rounded-lg flex flex-col mb-[5rem] "
+      className=" mt-[10rem] bg-white shadow-lg w-[24.9rem] h-[31.29rem] max-h[31.29rem] rounded-lg flex flex-col mb-[5rem] "
     >
       {/* Column Title */}
 
@@ -63,10 +79,6 @@ const ColumnContainer = (props: Props) => {
         className=" text-md h-[3.8rem] cursor-grab rounded-md rounded-b-none p-3 font-bold flex items-center justify-between"
       >
         <div className="flex gap-2 ">
-          <div className="flex justify-center items-center bg-white px-2 py-1 text-sm rounded-full">
-            0
-          </div>
-
           {!editMode && column.title}
           {editMode && (
             <input
@@ -107,9 +119,25 @@ const ColumnContainer = (props: Props) => {
         </button>
       </div>
       {/* Column task container */}
-      <div className="flex flex-grow">Content</div>
+      <div className="flex flex-grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto">
+        <SortableContext items={tasksIds}>
+          {tasks.map((task) => (
+            <TaskCard
+              key={task.id}
+              task={task}
+              deleteTask={deleteTask}
+              updateTask={updateTask}
+            />
+          ))}
+        </SortableContext>
+      </div>
       {/* Column footer */}
-      <button className="flex items-center gap-2 justify-center p-2 bg-slate-200   transition duration-200 ease-out hover:bg-black hover:text-white rounded-lg rounded-t-none ">
+      <button
+        onClick={() => {
+          createTask(column.id);
+        }}
+        className="flex items-center gap-2 justify-center p-2 bg-slate-400  transition duration-200 ease-out hover:bg-black hover:text-white rounded-lg rounded-t-none "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
